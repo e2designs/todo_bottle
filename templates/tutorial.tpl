@@ -13,10 +13,10 @@ $def with (form, text)
         <script type="text/javascript">
                                 jQuery(document).ready(function() {
                                 jQuery(".button").click(function() {
-                                        var input_string = $$("input#textfield").val();
+                                        var select_userid = $$("input#userid");
                                         jQuery.ajax({
                                                 type: "POST",
-                                                data: {textfield : input_string},
+                                                data: {userid : select_userid},
                                                 success: function(data) {
                                                 jQuery('#foo').html(data).hide().fadeIn(1500);
                                                 },

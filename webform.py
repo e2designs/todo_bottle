@@ -19,7 +19,7 @@ class dropdown():
                   web.form.Dropdown('author', args=[], description='author'),
                   web.form.Dropdown('modid', args=[], description='Test Module id')
                   )
-        self.my_form.author.args = ['None Selected', 'eevans', 'jenkins', 'userx']
+        self.my_form.author.args = ['None Selected', 'jbrown', 'jenkins', 'userx']
 
     def GET(self):
         form = self.my_form()
@@ -29,8 +29,8 @@ class dropdown():
         form = self.my_form()
         form.validates()
         s = form.author.value
-        if s == 'eevans':
-            form.modid.args = ['None Selected', 'Eric1', 'Eric2']
+        if s == 'jbrown':
+            form.modid.args = ['None Selected', 'James1', 'James2']
         elif s == 'jenkins':
             form.modid.args = ['None Selected', 'jenkins1', 'jenkins2']
         elif s == 'userx':
